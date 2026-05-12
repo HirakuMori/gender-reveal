@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next build",
+    "build": "next build && rm -rf docs && mv out docs",
+    "export": "next build && rm -rf docs && mv out docs",
     "start": "next start",
     "lint": "next lint"
   },

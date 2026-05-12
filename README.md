@@ -4,7 +4,7 @@ Next.js static export (`output: export`) で動作する、URL hash + AES クラ
 
 ## 要件対応
 
-- GitHub Pages: `next build` で `out/` 出力してそのまま配信
+- GitHub Pages: `next build` で `docs/` 出力してそのまま配信
 - URL共有: 生成リンクを共有するだけで閲覧可能
 - 性別がURLから直接わからない: 性別含む本文はAES-GCM暗号文に格納
 - URL hash 利用: `#d=...&k=...` を利用
@@ -25,5 +25,5 @@ npm run dev
 
 ```bash
 npm run build
-# out/ を Pages に公開
+# docs/ を Pages に公開
 ```
