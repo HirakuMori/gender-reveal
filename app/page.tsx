@@ -25,15 +25,17 @@ const initial: Payload = {
   finalMessage: "これからもよろしくね♡",
 };
 
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/gender-reveal" : "";
+
 const TEMPLATE = {
   id: "little-bear" as const,
   name: "Little Bear",
   images: {
-    before: "/templates/little-bear/open-before.svg",
-    revealBoy: "/templates/little-bear/open-after-boy.svg",
-    revealGirl: "/templates/little-bear/open-after-girl.svg",
-    finalBoy: "/templates/little-bear/final-boy.svg",
-    finalGirl: "/templates/little-bear/final-girl.svg",
+    before: `${BASE_PATH}/templates/little-bear/open-before.svg`,
+    revealBoy: `${BASE_PATH}/templates/little-bear/open-after-boy.svg`,
+    revealGirl: `${BASE_PATH}/templates/little-bear/open-after-girl.svg`,
+    finalBoy: `${BASE_PATH}/templates/little-bear/final-boy.svg`,
+    finalGirl: `${BASE_PATH}/templates/little-bear/final-girl.svg`,
   },
 };
 
