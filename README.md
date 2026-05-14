@@ -24,6 +24,10 @@ npm run dev
 ## デプロイ（GitHub Pages）
 
 ```bash
+# ローカル確認（ルート配信想定）
 npm run build
+
+# GitHub Pages（/gender-reveal 配下で配信）
+BASE_PATH=/gender-reveal npm run build
 # docs/ を Pages に公開
 ```
