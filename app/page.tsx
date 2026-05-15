@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { BASE_PATH } from "../lib/base-path";
 
 type Gender = "boy" | "girl";
 type ThemeId = "little-bear";
@@ -24,8 +25,6 @@ const initial: Payload = {
   revealMessage: "性別がわかりました",
   finalMessage: "これからもよろしくね♡",
 };
-
-const BASE_PATH = process.env.NODE_ENV === "production" ? "/gender-reveal" : "";
 
 const TEMPLATE = {
   id: "little-bear" as const,
