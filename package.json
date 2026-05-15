@@ -4,10 +4,12 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && rm -rf docs && mv out docs",
-    "export": "next build && rm -rf docs && mv out docs",
+    "build": "npm run build:pages",
+    "export": "BASE_PATH=/gender-reveal NEXT_PUBLIC_BASE_PATH=/gender-reveal next build && rm -rf docs && mv out docs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:pages": "BASE_PATH=/gender-reveal NEXT_PUBLIC_BASE_PATH=/gender-reveal next build && rm -rf docs && mv out docs",
+    "build:root": "BASE_PATH= NEXT_PUBLIC_BASE_PATH= next build && rm -rf docs && mv out docs"
   },
   "dependencies": {
     "next": "15.3.2",

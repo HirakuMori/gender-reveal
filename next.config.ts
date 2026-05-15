@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
-
-const basePath = process.env.BASE_PATH ?? "";
+import { BASE_PATH } from "./lib/base-path";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+  basePath: BASE_PATH,
+  assetPrefix: BASE_PATH ? `${BASE_PATH}/` : undefined,
   images: { unoptimized: true }
 };
 
