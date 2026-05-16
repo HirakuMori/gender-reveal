@@ -3,7 +3,7 @@ body{margin:0;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;bac
 main{min-height:100vh}
 
 .builderWrap{padding:24px}
-.builder{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:24px;background:#fff;border:1px solid #efd7d0;border-radius:28px;padding:24px}
+.builder{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:24px;background:#fff;border:1px solid #efd7d0;border-radius:28px;padding:24px}
 .leftCol{display:grid;gap:18px}
 .rightCol{border-left:1px solid #f1e2dc;padding-left:20px;display:grid;align-content:start;gap:14px}
 .brand{color:#cc9386;font-style:italic;margin:0}
@@ -14,7 +14,7 @@ h3{font-size:28px;margin:0}
 
 .templateCard{display:flex;gap:14px;align-items:center;background:#fff7f5;border:2px solid #ef8f9e;border-radius:18px;padding:12px;width:100%;text-align:left}
 .templatePreview{width:96px;height:130px;object-fit:cover;border-radius:12px;border:1px solid #ecd5cf}
-.templateCard p{margin:5px 0 0;color:#8c6f62;font-size:14px}
+.templateName{color:#513b33}
 
 .formPanel{background:#fff;border:1px solid #f2e1dc;border-radius:18px;padding:16px;display:grid;gap:12px}
 label{display:grid;gap:6px;font-weight:700}

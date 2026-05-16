@@ -111,7 +111,7 @@
   app.innerHTML = `
   <section class="builder"><div class="leftCol">
   <header><p class="brand">Surprise Link</p><h1>ジェンダーリビール メッセージ作成</h1><p class="lead">テンプレートを選んで、想いを込めたサプライズリンクを作りましょう。</p></header>
-  <section><h2>1 テンプレートを選ぶ</h2><button class="templateCard active" aria-pressed><img id="templatePreview" src="${stageImage("reveal", initial.gender)}" alt="テンプレート見本" class="templatePreview" /><div><strong>${TEMPLATE.name}</strong><p>オープン前 / オープン後</p></div></button></section>
+  <section><h2>1 テンプレートを選ぶ</h2><button class="templateCard active" aria-pressed><img id="templatePreview" src="${stageImage("reveal", initial.gender)}" alt="テンプレート見本" class="templatePreview" /><div><strong class="templateName">${TEMPLATE.name}</strong></div></button></section>
   <section class="formPanel"><h2>2 メッセージを入力する</h2>
   <label>合言葉（受け取る人に伝えるパスワード）<input id="secret" value="baby2026" /></label>
   <label>オープン前メッセージ<input id="beforeMessage" maxlength="50" value="${initial.beforeMessage}" /></label>
@@ -119,7 +119,7 @@
   <label>最後のメッセージ<input id="finalMessage" maxlength="50" value="${initial.finalMessage}" /></label></section>
   <section><h2>3 性別を選ぶ</h2><div class="seg"><label id="girlLabel" class="picked girl"><input type="radio" name="gender" value="girl" checked /> 女の子</label><label id="boyLabel" class="boy"><input type="radio" name="gender" value="boy" /> 男の子</label></div></section>
   <section class="result"><h2>4 設定を確認して、リンクを生成する</h2><ul id="summary"></ul><button id="generateBtn">リンクを生成する</button><textarea id="resultUrl" readonly rows="3" style="display:none"></textarea><div id="actions" class="actions" style="display:none"><button id="copyBtn">リンクをコピー</button><span id="copied" style="display:none">コピーしました</span><a id="previewLink" href="#" target="_blank" rel="noreferrer">プレビューを開く</a></div></section>
-  <p id="err" class="err"></p></div><aside class="rightCol"><h3>プレビュー</h3><div class="phoneMock"><img id="previewImage" src="${stageImage("reveal", initial.gender)}" alt="プレビュー画像" /></div><p>テンプレートごとに、オープン前・後の表示が変わります。</p></aside></section>`;
+  <p id="err" class="err"></p></div></section>`;
 
   let data = { ...initial };
   const update = () => {
@@ -127,7 +127,6 @@
     document.getElementById("boyLabel").className = data.gender === "boy" ? "picked boy" : "boy";
     const preview = stageImage("reveal", data.gender);
     document.getElementById("templatePreview").src = preview;
-    document.getElementById("previewImage").src = preview;
     document.getElementById("summary").innerHTML = `<li>テンプレート: ${TEMPLATE.name}</li><li>オープン前: ${data.beforeMessage}</li><li>オープン時: ${data.revealMessage}</li><li>最後: ${data.finalMessage}</li><li>性別: ${data.gender === "girl" ? "女の子" : "男の子"}</li>`;
   };
   update();
